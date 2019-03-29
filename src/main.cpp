@@ -94,14 +94,14 @@ void drawClusters( cv::Mat &img, std::vector<std::vector<double> > &lines, std::
 	}
 }
 
-void main()
+int main()
 {
 	string inPutImage = "D:\\DevelopCenter\\VanishingPoints\\datasets\\YorkUrbanDB\\P1020171\\P1020171.jpg";
 
 	cv::Mat image= cv::imread( inPutImage );
 	if ( image.empty() )
 	{
-		printf( "Load image error : %s\n", inPutImage );
+		printf( "Load image error" );
 	}
 
 	// LSD line segment detection
@@ -122,4 +122,6 @@ void main()
 	drawClusters( image, lines, clusters );
 	imshow("",image);
 	cv::waitKey( 0 );
+
+	return 0;
 }

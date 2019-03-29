@@ -13,3 +13,5 @@ FILE(GLOB_RECURSE SRCS_FILES "src/*.c" "src/*.cpp")
 
 ADD_EXECUTABLE(${PROJECT_NAME} ${SRCS_FILES} ${HDRS_FILES})
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${OpenCV_LIBS})
+
+add_library(VPDetection src/VPDetection.cpp)
