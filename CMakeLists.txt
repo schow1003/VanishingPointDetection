@@ -4,6 +4,9 @@ PROJECT( VanishingPoint )
 ###############################################################################
 # CMake settings
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.3)
+set(CMAKE_CXX_FLAGS_RELEASE "-fPIC")
+set(CMAKE_C_FLAGS_RELEASE "-fPIC")
+set(CMAKE_BUILD_TYPE "Release")
 
 # OpenCV
 FIND_PACKAGE(OpenCV REQUIRED)
